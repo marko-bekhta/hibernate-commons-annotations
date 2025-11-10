@@ -98,6 +98,10 @@ publishing {
     }
 }
 
+tasks.register("releasePrepare") {
+	dependsOn publishAllPublicationsToStagingRepository
+}
+
 // OSGi manifest helpers ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class OsgiManifestPackagingInfo {
